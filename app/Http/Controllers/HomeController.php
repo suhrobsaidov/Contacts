@@ -24,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $contacts= Contacts::paginate(15);
 
-        return view('home');
+        return view('home' ,compact('contacts'));
     }
 }
